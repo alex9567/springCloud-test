@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableEurekaClient
 @EnableDiscoveryClient
 //eureka 发现
-@EnableFeignClients(basePackages = {"com.chen"})
+@EnableFeignClients(basePackages = {"com.chen.service"})
 @RestController
 public class ServiceHiApplication {
     private static Logger log = LoggerFactory.getLogger(ServiceHiApplication.class);
