@@ -12,20 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+//如果没有下载我的另一个项目，需要删除整个类，因为没有其他微服务可以使用
 @Slf4j
 @RestController
 public class ChenTestServiceImpl implements ChenTestService {
-    //如果没有下载我的另一个项目，需要注释这2行，因为没有其他微服务可以使用
     @Resource
     private CommonService service;
 
     @Override
     public ResultTest<String> test1() {
+        Result<String> result = service.test1();
+        log.info(new Gson().toJson(result));
         log.info("test1");
         return ResultTest.success("hello");
     }
 
-    //如果没有下载我的另一个项目，需要注释这个方法，因为没有其他微服务可以使用
     @Override
     public ResultTest<String> test2() {
         Result<String> result = service.test1();
