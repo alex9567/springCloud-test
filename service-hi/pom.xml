@@ -34,6 +34,7 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <!--    如果需要单机启动，没有下载我的另一个项目。注释这个maven引用即可    -->
         <dependency>
             <groupId>com.chen</groupId>
             <artifactId>chen_service</artifactId>

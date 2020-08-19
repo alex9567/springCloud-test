@@ -15,6 +15,7 @@ import javax.annotation.Resource;
 @Slf4j
 @RestController
 public class ChenTestServiceImpl implements ChenTestService {
+    //如果没有下载我的另一个项目，需要注释这2行，因为没有其他微服务可以使用
     @Resource
     private CommonService service;
 
@@ -24,6 +25,7 @@ public class ChenTestServiceImpl implements ChenTestService {
         return ResultTest.success("hello");
     }
 
+    //如果没有下载我的另一个项目，需要注释这个方法，因为没有其他微服务可以使用
     @Override
     public ResultTest<String> test2() {
         Result<String> result = service.test1();
@@ -31,6 +33,7 @@ public class ChenTestServiceImpl implements ChenTestService {
         return ResultTest.success("success");
     }
 
+    //如果没有下载我的另一个项目，需要注释这个方法，因为没有其他微服务可以使用
     @Override
     public ResultTest<String> test3() {
         TestHelloRequestDTO testHelloRequestDTO = new TestHelloRequestDTO();
