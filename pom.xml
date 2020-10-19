@@ -43,12 +43,6 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>3.8.1</version>
             </dependency>
-            <!--    如果需要单机启动，没有下载我的另一个项目。注释这个maven引用即可    -->
-            <dependency>
-                <groupId>com.chen</groupId>
-                <artifactId>chen_service</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
     <properties>
