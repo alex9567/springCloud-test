@@ -1,7 +1,6 @@
 package com.chen.hi.interceptor;
 
 import feign.RequestInterceptor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,15 +12,14 @@ import org.springframework.context.annotation.Configuration;
  **/
 @Configuration
 public class FeignSupportConfig {
-    @Autowired
-    FeignTrackInterceptor feignTrackInterceptor;
+
     /**
      * feign请求拦截器
      *
      * @return
      */
     @Bean
-    public RequestInterceptor requestInterceptor(){
-        return feignTrackInterceptor;
+    public RequestInterceptor requestInterceptor() {
+        return new FeignTrackInterceptor();
     }
 }
